@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
+
 export function Settings() {
+  const { t } = useTranslation();
   return (
     <>
-      <div> Here will be settings of the website e.g. lang and theme </div>
+      <div>{t("Settings.Info")}</div>
     </>
   );
 }
