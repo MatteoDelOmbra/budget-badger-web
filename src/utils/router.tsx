@@ -1,16 +1,34 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home } from "@pages/Home";
 import { NotFound } from "@pages/NotFound";
-import { Settings } from "@pages/Settings";
+import { BoilerPlate } from "@pages/BoilerPlate";
+import { SignIn } from "@pages/SignIn";
+import { Dashboard } from "@pages/Dashboard";
+import ProtectedRoute from "@components/ProtectedRoute";
+
+export const paths = {
+  index: "/",
+  dashboard: "/dashboard",
+  sigin: "/sigin",
+};
 
 export const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home />,
+    path: paths.index,
+    element: <BoilerPlate />,
     errorElement: <NotFound />,
-  },
-  {
-    path: "/settings",
-    element: <Settings />,
+    children: [
+      {
+        path: paths.sigin,
+        element: <SignIn />,
+      },
+      {
+        path: paths.dashboard,
+        element: (
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        ),
+      },
+    ],
   },
 ]);
