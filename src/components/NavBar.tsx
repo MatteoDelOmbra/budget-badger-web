@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useAuth } from "./AuthProvider";
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { paths } from "@utils/router";
 
@@ -9,15 +8,6 @@ const StyledNavBar = styled.div``;
 export function NavBar() {
   const userCtx = useAuth();
   const navigate = useNavigate();
-  const [navTxt, setNavTxt] = useState<string>("");
-
-  useEffect(() => {
-    if (userCtx.isSignedIn()) {
-      setNavTxt("Logged in NavBar");
-    } else {
-      setNavTxt("Not logged in Navbar");
-    }
-  }, [userCtx]);
 
   const onClickHandler = () => {
     userCtx.signout();
@@ -26,12 +16,29 @@ export function NavBar() {
 
   return (
     <StyledNavBar>
-      <p>
-        {navTxt}
-        {userCtx.isSignedIn() && (
+      <div>logo</div>
+      {userCtx.isSignedIn() && (
+        <>
+          <div>Il Bilancio</div>
+          <button>Nowa transakcja</button>
+          <div>marzec 24</div>
+          <div>Rozliczenia</div>
+
+          <div>Ustawienia budżetu</div>
+          <div>Mój profil</div>
+
           <button onClick={onClickHandler}>logout</button>
-        )}
-      </p>
+
+          <div>Zmień motyw</div>
+          <div>Zmień język</div>
+        </>
+      )}
+      {!userCtx.isSignedIn() && (
+        <>
+          <div>Sign in</div>
+          <div>Register</div>
+        </>
+      )}
     </StyledNavBar>
   );
 }
