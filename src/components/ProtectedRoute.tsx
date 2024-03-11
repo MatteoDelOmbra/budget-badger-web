@@ -6,12 +6,12 @@ import { paths } from "@utils/router";
 type ProtectedRouteProps = PropsWithChildren;
 
 export default function ProtectedRoute({ children }: ProtectedRouteProps) {
-  const userCtx = useAuth();
+  const userContext = useAuth();
   const navigate = useNavigate();
   useEffect(() => {
-    if (!userCtx.isSignedIn()) {
+    if (!userContext.isSignedIn()) {
       navigate(paths.sigin, { replace: true });
     }
-  }, [navigate, userCtx]);
+  }, [navigate, userContext]);
   return children;
 }

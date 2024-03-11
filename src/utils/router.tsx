@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { NotFound } from "@pages/NotFound";
-import { BoilerPlate } from "@pages/BoilerPlate";
+import { Boilerplate } from "@pages/Boilerplate";
 import { SignIn } from "@pages/SignIn";
 import { Dashboard } from "@pages/Dashboard";
 import ProtectedRoute from "@components/ProtectedRoute";
@@ -14,7 +14,7 @@ export const paths = {
 export const router = createBrowserRouter([
   {
     path: paths.index,
-    element: <BoilerPlate />,
+    element: <Boilerplate />,
     errorElement: <NotFound />,
     children: [
       {

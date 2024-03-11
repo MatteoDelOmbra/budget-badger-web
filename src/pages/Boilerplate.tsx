@@ -6,14 +6,14 @@ import { paths } from "@utils/router";
 import { useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 
-export function BoilerPlate() {
+export function Boilerplate() {
   const navigate = useNavigate();
   const location = useLocation();
-  const userCtx = useAuth();
+  const userContext = useAuth();
 
   useEffect(() => {
     if (location.pathname == "/")
-      if (userCtx.isSignedIn()) {
+      if (userContext.isSignedIn()) {
         navigate(paths.dashboard);
       } else {
         navigate(paths.sigin);

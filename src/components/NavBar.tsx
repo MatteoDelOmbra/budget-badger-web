@@ -2,22 +2,23 @@ import styled from "styled-components";
 import { useAuth } from "./AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { paths } from "@utils/router";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const StyledNavBar = styled.div``;
 
 export function NavBar() {
-  const userCtx = useAuth();
+  const userContext = useAuth();
   const navigate = useNavigate();
 
   const onClickHandler = () => {
-    userCtx.signout();
+    userContext.signout();
     navigate(paths.sigin);
   };
 
   return (
     <StyledNavBar>
       <div>logo</div>
-      {userCtx.isSignedIn() && (
+      {userContext.isSignedIn() && (
         <>
           <div>Il Bilancio</div>
           <button>Nowa transakcja</button>
@@ -28,17 +29,16 @@ export function NavBar() {
           <div>Mój profil</div>
 
           <button onClick={onClickHandler}>logout</button>
-
-          <div>Zmień motyw</div>
-          <div>Zmień język</div>
         </>
       )}
-      {!userCtx.isSignedIn() && (
+      {!userContext.isSignedIn() && (
         <>
           <div>Sign in</div>
           <div>Register</div>
         </>
       )}
+      <ThemeSwitcher />
+      <div>Zmień język</div>
     </StyledNavBar>
   );
 }
