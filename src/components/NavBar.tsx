@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { useAuth } from "./AuthProvider";
+import { useAuth } from "./authorization/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { paths } from "@utils/router";
-import { ThemeSwitcher } from "./ThemeSwitcher";
+import { ThemeSwitcher } from "./theme/ThemeSwitcher";
 
 const StyledNavBar = styled.div``;
 

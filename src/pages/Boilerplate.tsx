@@ -1,5 +1,5 @@
-import { useAuth } from "@components/AuthProvider";
 import { NavBar } from "@components/NavBar";
+import { useAuth } from "@components/authorization/AuthProvider";
 import { ContentWrapper } from "@components/wrappers/ContentWrapper";
 import { PageWrapper } from "@components/wrappers/PageWrapper";
 import { paths } from "@utils/router";

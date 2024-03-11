@@ -3,7 +3,7 @@ import { NotFound } from "@pages/NotFound";
 import { Boilerplate } from "@pages/Boilerplate";
 import { SignIn } from "@pages/SignIn";
 import { Dashboard } from "@pages/Dashboard";
-import ProtectedRoute from "@components/ProtectedRoute";
+import ProtectedRoute from "@components/authorization/ProtectedRoute";
 
 export const paths = {
   index: "/",
