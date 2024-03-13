@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useAuth } from "./authorization/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { paths } from "@utils/router";
-import { ThemeSwitcher } from "./theme/ThemeSwitcher";
+import { ThemeToggle } from "./theme/ThemeToggle";
 
 const StyledNavBar = styled.div``;
 
@@ -37,7 +37,7 @@ export function NavBar() {
           <div>Register</div>
         </>
       )}
-      <ThemeSwitcher />
+      <ThemeToggle />
       <div>Zmień język</div>
     </StyledNavBar>
   );

@@ -1,6 +1,6 @@
 import { useTheme } from "./ThemeProvider";
 
-export function ThemeSwitcher() {
+export function ThemeToggle() {
   const themeContext = useTheme();
 
   const toggleTheme = () => {
