@@ -5,14 +5,13 @@ import plPL from "./translations/pl-PL";
 import enUS from "./translations/en-US";
 
 export const languages = ["en-US", "pl-PL"];
-export const DEFAULT_LANGUAGE = "en-US";
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     debug: true,
-    fallbackLng: "en-US",
+    fallbackLng: import.meta.env.VITE_DEFAULT_LANGUAGE,
     resources: {
       "en-US": enUS,
       "pl-PL": plPL,

@@ -1,3 +1,4 @@
+import { UserKey } from "@utils/localStorageKeys";
 import { PropsWithChildren, createContext, useContext, useState } from "react";
 import { User } from "src/types/User";
 
@@ -22,17 +23,17 @@ export function AuthProvider({ children }: PropsWithChildren) {
     //post request to API
     //it should return rejection if invalid, or userObject and refreshToekn (refToken will be added later)
     const user: User = { id: 5, name: "Matteo" };
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem(UserKey, JSON.stringify(user));
     setUser(user);
   };
 
   const signout = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem(UserKey);
     setUser(null);
   };
 
   const isSignedIn = () => {
-    const user = localStorage.getItem("user");
+    const user = localStorage.getItem(UserKey);
     if (user === null) {
       return false;
     } else {

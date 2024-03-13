@@ -1,11 +1,13 @@
+import { useTranslation } from "react-i18next";
 import { useTheme } from "./ThemeProvider";
 
 export function ThemeToggle() {
+  const { t } = useTranslation();
   const themeContext = useTheme();
 
-  const toggleTheme = () => {
-    themeContext.toggleTheme();
-  };
-
-  return <button onClick={toggleTheme}>Zmień motyw</button>;
+  return (
+    <button onClick={() => themeContext.toggleTheme()}>
+      {t("ThemeToggle.Button")}
+    </button>
+  );
 }

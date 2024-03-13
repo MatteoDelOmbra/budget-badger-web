@@ -1,4 +1,5 @@
-import { DEFAULT_THEME, themes } from "@styles/themes";
+import { themes } from "@styles/themes";
+import { ThemeKey } from "@utils/localStorageKeys";
 import { PropsWithChildren, createContext, useContext, useState } from "react";
 import {
   DefaultTheme,
@@ -17,12 +18,12 @@ export function ThemeProvider({ children }: PropsWithChildren) {
   const [theme, setTheme] = useState<DefaultTheme | null>(null);
 
   const getSavedTheme = () => {
-    return localStorage.getItem("theme") ?? DEFAULT_THEME;
+    return localStorage.getItem(ThemeKey) ?? import.meta.env.VITE_DEFAULT_THEME;
   };
 
   const setNewTheme = (theme: string) => {
     setTheme(themes[theme]);
-    localStorage.setItem("theme", theme);
+    localStorage.setItem(ThemeKey, theme);
   };
 
   if (theme === null) {
