@@ -1,14 +1,14 @@
 export default {
   translation: {
-    Home: {
-      NavbarDescription: "Nav bar here",
-      MainDescription: "Main container here",
+    LanguageSwitcher: {
+      "en-US": "English",
+      "pl-PL": "Polish",
     },
-    Settings: {
-      Info: "Here will be settings of the website e.g. lang and theme",
+    Navbar: {
+      LogoInfo: "Here is logo",
     },
-    NotFound: {
-      Info: "404 - page not found",
+    ThemeToggle: {
+      Button: "Change theme",
     },
   },
 };

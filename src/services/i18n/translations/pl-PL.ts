@@ -1,14 +1,14 @@
 export default {
   translation: {
-    Home: {
-      NavbarDescription: "Tutaj nav bar",
-      MainDescription: "Tutaj główny kontener",
+    LanguageSwitcher: {
+      "en-US": "Angielski",
+      "pl-PL": "Polski",
     },
-    Settings: {
-      Info: "Tutaj będą ustawienia strony tj. język i theme",
+    Navbar: {
+      LogoInfo: "Tutaj jest logo",
     },
-    NotFound: {
-      Info: "404 - nie ma takiej strony",
+    ThemeToggle: {
+      Button: "Zmień motyw",
     },
   },
 };
