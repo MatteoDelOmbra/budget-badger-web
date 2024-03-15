@@ -11,9 +11,8 @@
 11.03.2024 - switching themes mechanism
 12.03.2024 - lazy day
 13.03.2024 - switching languages mechanism
-14.03.2024 - 
-15.03.2024 - 
-16.03.2024 - 
-17.03.2024 - 
-18.03.2024 - 
-
+14.03.2024 - create journal, but lazy day
+15.03.2024 - few refactors, prototype pages
+16.03.2024 -
+17.03.2024 -
+18.03.2024 -

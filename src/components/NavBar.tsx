@@ -3,7 +3,7 @@ import { useAuth } from "./authorization/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import { paths } from "@utils/router";
 import { ThemeToggle } from "./theme/ThemeToggle";
-import { LanguageSwitcher } from "./LanguageSwittcher";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 
 const StyledNavBar = styled.div``;
@@ -24,21 +24,22 @@ export function NavBar() {
       <div>{t("Navbar.LogoInfo")}</div>
       {userContext.isSignedIn() && (
         <>
-          <div>Il Bilancio</div>
-          <button>Nowa transakcja</button>
-          <div>marzec 24</div>
-          <div>Rozliczenia</div>
+          <div>{t("Navbar.BudgetName")}</div>
+          <button>{t("Navbar.NewTranscationButton")}</button>
+          <div>{t("Navbar.Dashboard")}</div>
+          <div>{t("Navbar.Summary")}</div>
+          <div>{t("Navbar.Payoffs")}</div>
 
-          <div>Ustawienia budżetu</div>
-          <div>Mój profil</div>
+          <div>{t("Navbar.BudgetSettings")}</div>
+          <div>{t("Navbar.MyProfile")}</div>
 
-          <button onClick={onClickHandler}>logout</button>
+          <button onClick={onClickHandler}>{t("Navbar.Logout")}</button>
         </>
       )}
       {!userContext.isSignedIn() && (
         <>
-          <div>Sign in</div>
-          <div>Register</div>
+          <div>{t("Navbar.Signin")}</div>
+          <div>{t("Navbar.Register")}</div>
         </>
       )}
       <ThemeToggle />
