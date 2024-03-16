@@ -1,7 +1,7 @@
 import { DefaultTheme } from "styled-components";
-import { global } from "./global";
+import { common } from "./common";
 
 export const dark: DefaultTheme = {
-  ...global,
+  ...common,
   main: "grey",
 };

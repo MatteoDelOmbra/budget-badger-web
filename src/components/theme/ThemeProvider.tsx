@@ -1,4 +1,4 @@
-import { themes } from "@styles/themes";
+import { themes } from "@styles/themes/themes";
 import { ThemeKey } from "@utils/localStorageKeys";
 import { PropsWithChildren, createContext, useContext, useState } from "react";
 import {

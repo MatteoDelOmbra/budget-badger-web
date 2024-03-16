@@ -20,7 +20,7 @@ export function Boilerplate() {
       }
   });
   return (
-    <PageWrapper>
+    <PageWrapper id="PageWrapper">
       <NavBar />
       <ContentWrapper>
         <Outlet />

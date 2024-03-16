@@ -6,7 +6,9 @@ import { ThemeToggle } from "./theme/ThemeToggle";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 
-const StyledNavBar = styled.div``;
+const StyledNavBar = styled.div`
+  grid-area: navbar;
+`;
 
 export function NavBar() {
   const { t } = useTranslation();
