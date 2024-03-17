@@ -13,6 +13,6 @@
 13.03.2024 - switching languages mechanism
 14.03.2024 - create journal, but lazy day
 15.03.2024 - few refactors, prototype pages
-16.03.2024 -
-17.03.2024 -
+16.03.2024 - format a little bit main look
+17.03.2024 - lazy day
 18.03.2024 -
