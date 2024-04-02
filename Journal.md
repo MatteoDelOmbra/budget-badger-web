@@ -30,3 +30,4 @@
 - 30.03.2024 - lazy day
 - 31.03.2024 - lazy day
 - 01.04.2024 - lazy day
+- 02.04.2024 - lazy day
