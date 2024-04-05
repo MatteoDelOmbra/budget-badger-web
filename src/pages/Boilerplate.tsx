@@ -1,5 +1,5 @@
-import { NavBar } from "@components/NavBar";
 import { useAuth } from "@components/authorization/AuthProvider";
+import { Navbar } from "@components/navbar/Navbar";
 import { ContentWrapper } from "@components/wrappers/ContentWrapper";
 import { PageWrapper } from "@components/wrappers/PageWrapper";
 import { paths } from "@utils/router";
@@ -16,12 +16,12 @@ export function Boilerplate() {
       if (userContext.isSignedIn()) {
         navigate(paths.dashboard);
       } else {
-        navigate(paths.sigin);
+        navigate(paths.signIn);
       }
   });
   return (
     <PageWrapper>
-      <NavBar />
+      <Navbar />
       <ContentWrapper>
         <Outlet />
       </ContentWrapper>

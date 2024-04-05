@@ -7,5 +7,6 @@ body {
 
 *{
   font-family: Thasadith;
+  color: ${(props) => props.theme.primaryText};
 }
 `;

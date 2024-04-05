@@ -3,5 +3,7 @@ import { common } from "./common";
 
 export const light: DefaultTheme = {
   ...common,
-  main: "#eeeee4",
+  primary: "#eeeee4",
+  secondary: "as",
+
 };

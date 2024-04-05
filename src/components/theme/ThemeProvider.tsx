@@ -8,10 +8,12 @@ import {
 
 type ThemeContextProps = {
   toggleTheme: Function;
+  getTheme: Function;
 };
 
 const ThemeContext = createContext<ThemeContextProps>({
   toggleTheme: () => {},
+  getTheme: () => {},
 });
 
 export function ThemeProvider({ children }: PropsWithChildren) {
@@ -38,7 +40,7 @@ export function ThemeProvider({ children }: PropsWithChildren) {
   };
 
   return (
-    <ThemeContext.Provider value={{ toggleTheme }}>
+    <ThemeContext.Provider value={{ toggleTheme, getTheme: getSavedTheme }}>
       <StyledThemeProvider theme={theme!}>{children}</StyledThemeProvider>
     </ThemeContext.Provider>
   );

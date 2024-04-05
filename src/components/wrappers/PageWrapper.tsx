@@ -7,6 +7,5 @@ export const PageWrapper = styled.div`
   grid-template-areas: "navbar main";
   margin: 0;
   padding: 0;
-  /* gap: 2rem; */
-  background-color: ${(props) => props.theme.main};
+  background-color: ${(props) => props.theme.primary};
 `;

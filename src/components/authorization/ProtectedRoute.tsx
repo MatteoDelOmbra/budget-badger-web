@@ -10,7 +10,7 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
   const navigate = useNavigate();
   useEffect(() => {
     if (!userContext.isSignedIn()) {
-      navigate(paths.sigin, { replace: true });
+      navigate(paths.signIn, { replace: true });
     }
   }, [navigate, userContext]);
   return children;

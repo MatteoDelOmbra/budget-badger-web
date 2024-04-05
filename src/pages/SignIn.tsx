@@ -1,4 +1,5 @@
 import { useAuth } from "@components/authorization/AuthProvider";
+import { PrimaryBtn } from "@components/ui/PrimaryButton";
 import { paths } from "@utils/router";
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +14,7 @@ export function SignIn() {
   return (
     <>
       <p>Sign in page</p>
-      <button onClick={onClickHandler}>Log in!</button>
+      <PrimaryBtn onClick={onClickHandler}>Log in!</PrimaryBtn>
     </>
   );
 }
