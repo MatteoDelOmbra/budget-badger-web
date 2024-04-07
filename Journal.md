@@ -35,3 +35,4 @@
 - 04.04.2024 - lazy day
 - 05.04.2024 - styling navbar and creating empty pages
 - 06.04.2024 - lazy day
+- 07.04.2024 - lazy day
