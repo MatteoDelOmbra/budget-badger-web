@@ -37,4 +37,4 @@
 - 06.04.2024 - lazy day
 - 07.04.2024 - lazy day
 - 08.04.2024 - lazy day
-- 09.04.2024 - lazy day?
+- 09.04.2024 - working on Tabs component
